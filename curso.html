@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velt - Curso</title>
+    <style>
+        
+        :root {
+            --cor-primaria: #1E2A38;
+            --cor-secundaria: #4A5B78;
+            --cor-fundo-claro: #F5F6F8;
+            --cor-cinza: #D0D3D8;
+            --cor-sucesso: #4CAF50;
+            --cor-erro: #D32F2F;
+            --cor-texto: #1C1C1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--cor-fundo-claro);
+            color: var(--cor-texto);
+        }
+
+        header {
+            background-color: var(--cor-primaria);
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        header nav a, header nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        
+        .curso button {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 0.6rem;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Velt - Curso</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="simulador.html">Simulador</a>
+            <a href="quiz.html">Quiz</a>
+            <button onclick="logout()">Sair</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Curso: Introdução aos Investimentos</h2>
+        <p>Unidade 1: O que é um investimento</p>
+        <p>Aprenda os conceitos básicos do mundo dos investimentos e como começar a construir seu futuro financeiro.</p>
+        <button onclick="alert('Curso em desenvolvimento...')">Continuar</button>
+    </div>
+
+    <script>
+        
+        function logout() {
+            localStorage.removeItem('usuario');
+            localStorage.removeItem('senha');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
